@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+    
+        .form-group {
+            margin-bottom: 15px;
+            border-radius: 78px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Blood Donation Form</h1>
+    <form id="donationForm">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="65" required>
+            <span id="ageError" class="error"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="bloodType">Blood Type:</label>
+            <select id="bloodType" name="bloodType" required>
+                <option value="">Select your blood type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <span id="bloodTypeError" class="error"></span>
+
+</div>
+<div class="form-group">
+<label for="donationDate">Preferred Donation Date:</label>
+<input type="date" id="donationDate" name="donationDate" required>
+<span id="donationDateError" class="error"></span>
+
+</div>
+<div class="form-group">
+<label for="medicalConditions">Do you have any medical conditions? (If yes, please specify):</label>
+<textarea id="medicalConditions" name="medicalConditions"></textarea>
+
+</div>
+<div class="form-group">
+<label for="agreeToTerms">
+<input type="checkbox" id="agreeToTerms" name="agreeToTerms" required>
+                I agree to the terms and conditions
+</label>
+<span id="termsError" class="error"></span>
+</div>
+<button type="submit">Submit</button>
+</form>
+
+<script src="donationForm.js"></script>
+</body>
+</html>
+ 
+</body>
+</html>
